@@ -1,0 +1,30 @@
+﻿@model Employee
+
+
+
+<form method="post">
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" class="form-control" placeholder="Name" disabled>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label asp-for="Department">Department</label>
+            <input asp-for="Department" class="form-control" placeholder="Department" disabled>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label asp-for="Company">Company</label>
+            <input asp-for="Company" class="form-control" placeholder="Company" disabled>
+        </div>
+
+        
+            <div >
+                <button class="btn btn-danger mx-2" type="submit">Delete</button>
+                <a class="btn btn-primary mx-2" asp-controller="Employee" asp-action="Index">Back to list</a>
+            </div>
+            
+               
+            
+       
+       
+</form>
