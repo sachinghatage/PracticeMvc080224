@@ -25,28 +25,47 @@ namespace PracticeMvc.Controllers
         {
             return View();
         }
-/*
-        [HttpPost]
-        public IActionResult CreateEmployee(Employee employee)
-        {
-            if (ModelState.IsValid)   // by using this we ensure that form is submitted only once on post request,if this condition is not given values in db are saved twice
-            {
-                dbContext.Employees.Add(employee);
-                dbContext.SaveChanges();
-                return RedirectToAction("Index");
-            }
+        /*
+                [HttpPost]
+                public IActionResult CreateEmployee(Employee employee)
+                {
+                    if (ModelState.IsValid)   // by using this we ensure that form is submitted only once on post request,if this condition is not given values in db are saved twice
+                    {
+                        dbContext.Employees.Add(employee);
+                        dbContext.SaveChanges();
+                        return RedirectToAction("Index");
+                    }
 
-            return View(employee);
-        }*/
+                    return View(employee);
+                }*/
 
-        [HttpPost]
+        /*[HttpPost]
         public IActionResult CreateEmployee(Employee employee)
         {
                 dbContext.Employees.Add(employee);
                 dbContext.SaveChanges();
                 return RedirectToAction("Index");
   
+        }*/
+
+
+        [HttpPost]
+        public IActionResult CreateEmployee(Employee employee)
+        {
+            if (ModelState.IsValid)
+            {
+                // Save the employee to the database
+                dbContext.Employees.Add(employee);
+                dbContext.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+
+            // If ModelState is not valid, re-populate dropdowns and return the view with errors
+            return View(employee);
         }
+
+
 
         [HttpGet]
         public IActionResult EditEmployee(int id) 

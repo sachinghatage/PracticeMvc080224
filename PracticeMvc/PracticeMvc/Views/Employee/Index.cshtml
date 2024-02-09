@@ -1,7 +1,6 @@
-﻿
-@model List<Employee>
+﻿@model List<Employee>
 <div class="text-end">
-    <a asp-controller="Employee" asp-action="CreateEmployee" class="btn btn-primary mb-3 ">Create Employee</a>
+    <a asp-controller="Employee" asp-action="CreateEmployee" class="btn btn-primary mb-3 ">Create Employee <i class="bi bi-plus-circle"></i></a>
 </div>
 
 <table class="table table-bordered table-hover">
@@ -10,19 +9,25 @@
             <th>Name</th>
             <th>Department</th>
             <th>Company</th>
+            <th>City</th>
+            <th>Gender</th>
         </tr>
     </thead>
     <tbody>
-        @foreach(var emp in Model){
-        <tr>
-            <td>@emp.Name</td>
-            <td>@emp.Department</td>
-            <td>@emp.Company</td>
-            <td>
-                <a class="btn btn-primary mx-2" asp-controller="Employee" asp-action="EditEmployee" asp-route-id="@emp.Id">Edit</a>
-                <a class="btn btn-danger" asp-controller="Employee" asp-action="DeleteEmployee" asp-route-id="@emp.Id">Delete</a>
-            </td>
-        </tr>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.Name</td>
+                <td>@emp.Department</td>
+                <td>@emp.Company</td>
+                <td>@emp.City</td>
+                <td>@emp.Gender</td>
+                <td>
+                    <a class="btn btn-primary mx-2" asp-controller="Employee" asp-action="EditEmployee" asp-route-id="@emp.Id"><i class="bi bi-pencil-square"></i> Edit</a>
+                    <a class="btn btn-danger" asp-controller="Employee" asp-action="DeleteEmployee" asp-route-id="@emp.Id">Delete <i class="bi bi-trash-fill"></i></a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
+

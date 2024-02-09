@@ -134,3 +134,4 @@ C:\Users\IBS 4\Desktop\PractiveMvc\PracticeMvc\PracticeMvc\obj\Debug\net8.0\refi
 C:\Users\IBS 4\Desktop\PractiveMvc\PracticeMvc\PracticeMvc\obj\Debug\net8.0\PracticeMvc.pdb
 C:\Users\IBS 4\Desktop\PractiveMvc\PracticeMvc\PracticeMvc\obj\Debug\net8.0\PracticeMvc.genruntimeconfig.cache
 C:\Users\IBS 4\Desktop\PractiveMvc\PracticeMvc\PracticeMvc\obj\Debug\net8.0\ref\PracticeMvc.dll
+C:\Users\IBS 4\Desktop\PractiveMvc\PracticeMvc\PracticeMvc\obj\Debug\net8.0\PracticeMvc.sourcelink.json

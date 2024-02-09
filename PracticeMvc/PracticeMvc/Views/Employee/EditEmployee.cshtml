@@ -5,18 +5,90 @@
 <form method="post">
     <div class="form-row">
         <div class="col-md-4 mb-3">
-            <label asp-for="Name">Name</label>
+            <label asp-for="Name" class="form-label">Name</label>
             <input asp-for="Name" class="form-control" placeholder="Name" required>
         </div>
         <div class="col-md-4 mb-3">
-            <label asp-for="Department">Department</label>
-            <input asp-for="Department" class="form-control" placeholder="Department" required>
+            <label asp-for="Department">
+                Department <i class="bi bi-caret-down-fill"></i>
+
+            </label>
+            <select asp-for="Department" class="form-control" required>
+                <option value="">
+                    Select Department
+
+                </option>
+                <option value="Product Development">Product Development</option>
+                <option value="Marketing">Marketing</option>
+                <option value="HR">HR</option>
+                <option value="Accounts">Accounts</option>
+                <option value="HR">Administration</option>
+                <option value="Cyber">Cyber</option>
+                <option value="Networking">Networking</option>
+                <option value="Analyst">Analyst</option>
+                <option value="Communication">Communication</option>
+                <option value="Project Manager">Project Manager</option>
+                <option value="Finance">Finance</option>
+                <option value="Research Development">Research Development</option>
+            </select>
+            <span asp-validation-for="Department" class="text-danger"></span>
         </div>
         <div class="col-md-4 mb-3">
-            <label asp-for="Company">Company</label>
-            <input asp-for="Company" class="form-control" placeholder="Company" required>
+            <label asp-for="Company">
+                Company <i class="bi bi-caret-down-fill"></i>
+
+            </label>
+            <select asp-for="Company" class="form-control" required>
+                <option value="">
+                    Select Company
+
+                </option>
+                <option value="Tech mahindra">Tech mahindra</option>
+                <option value="Cognizant">Cognizant</option>
+                <option value="IBM">IBM</option>
+                <option value="Wipro">Wipro</option>
+                <option value="Accenture">Accenture</option>
+                <option value="TCS">TCS</option>
+                <option value="Microsoft">Microsoft</option>
+                <option value="Infosys">Infosys</option>
+                <option value="Oracle">Oracle</option>
+                <option value="Google">Google</option>
+                <option value="MPhasis">MPhasis</option>
+                <option value="Coforge">Coforge</option>
+                <option value="Techwish">Techwish</option>
+                <option value="MindTree">MindTree</option>
+            </select>
+            <span asp-validation-for="Company" class="text-danger"></span>
         </div>
-
-
-        <button class="btn btn-primary" type="submit">Submit form</button>
+        <div class="col-md-4 mb-3">
+            <label asp-for="City">City</label>
+            <input asp-for="City" class="form-control" placeholder="City" required>
+        </div>
+        <div class="form-group">
+            <label>Select Gender:</label><br />
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" asp-for="Gender" value="Male">
+                <label class="form-check-label">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" asp-for="Gender" value="Female">
+                <label class="form-check-label">Female</label>
+            </div>
+        </div>
+    </div>
+    <div class="mt-3">
+        <button class="btn btn-primary mx-2" type="submit">Save</button>
+        <a class="btn btn-primary" asp-controller="Employee" asp-action="Index"><i class="bi bi-arrow-left"></i> Back to list</a>
+    </div>
 </form>
+
+
+<div class="row">
+    <div class="col-sm-3 mb-3">
+        <label asp-for="City" class="form-label">City</label>
+    </div>
+    <div class="col-sm-2 mb-3">
+        <input asp-for="City" class="form-control" placeholder="City" required>
+    </div>
+</div>
+
