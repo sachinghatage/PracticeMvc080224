@@ -1,11 +1,41 @@
 ﻿@model List<Employee>
-<div class="text-end">
-    <a asp-controller="Employee" asp-action="CreateEmployee" class="btn btn-primary mb-3 ">Create Employee <i class="bi bi-plus-circle"></i></a>
+<div class="row mb-3">
+    <div class="col-md-6">
+        <div class="text-start">
+            <a asp-controller="Employee" asp-action="CreateEmployee" class="btn btn-primary">Create Employee <i class="bi bi-plus-circle"></i></a>
+        </div>
+    </div>
 </div>
 
-<table class="table table-bordered table-hover">
+<div class="col-md-6">
+    <form asp-controller="Employee" asp-action="Index" method="get">
+        <div class="form-group mb-2">
+            <div class="d-flex align-items-center">
+                <!-- Use Bootstrap class to make flex container -->
+                <div class="me-3">
+                    <label for="sortOrder" class="mb-0">Sort by:</label> <!-- Use mb-0 to remove bottom margin -->
+                </div>
+                <div class="me-3">
+                    <select class="form-select" id="sortOrder" name="sortOrder">
+                        <option value="id_desc">ID Descending</option>
+                        <option value="name">Name Ascending</option>
+                        <option value="name_desc">Name Descending</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Sort</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+<table class="table table-bordered table-hover mt-3">
     <thead>
         <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Department</th>
             <th>Company</th>
@@ -17,6 +47,7 @@
         @foreach (var emp in Model)
         {
             <tr>
+                <td>@emp.Id</td>
                 <td>@emp.Name</td>
                 <td>@emp.Department</td>
                 <td>@emp.Company</td>
@@ -30,4 +61,8 @@
         }
     </tbody>
 </table>
+
+<div class="mt-2">
+   <a class="btn btn-primary" asp-controller="Home" asp-action="Index">Home</a>
+</div>
 

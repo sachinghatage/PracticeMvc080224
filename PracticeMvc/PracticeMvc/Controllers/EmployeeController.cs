@@ -13,11 +13,10 @@ namespace PracticeMvc.Controllers
             this.dbContext = dbContext;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string sortOrder)
         {
-
-            List<Employee> employees = dbContext.Employees.ToList();
-            return View(employees);
+            List<Employee> sortedEmployees = SortEmployees(sortOrder);
+            return View(sortedEmployees);
         }
 
         [HttpGet]    //to avoid form submission twice better to use get and post for same method
@@ -97,5 +96,35 @@ namespace PracticeMvc.Controllers
             dbContext.SaveChanges();
             return RedirectToAction("Index");
         }
+
+
+        private List<Employee> SortEmployees(string sortOrder)
+        {
+            IQueryable<Employee> employeesQuery = dbContext.Employees.AsQueryable();
+
+            switch(sortOrder)
+            {
+                case "id_desc":
+                    employeesQuery = employeesQuery.OrderByDescending(e=>e.Id);
+                    break;
+
+                case "name":
+                    employeesQuery = employeesQuery.OrderBy(e=>e.Name);
+                    break;
+
+
+                case "name_desc":
+                    employeesQuery = employeesQuery.OrderByDescending(e=>e.Name);
+                    break;
+
+
+                default:
+                    employeesQuery = employeesQuery.OrderBy(e=>e.Id);
+                    break;
+            }
+
+            return employeesQuery.ToList();
+        }
+
     }
 }

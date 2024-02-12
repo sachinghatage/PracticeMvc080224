@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aEV5nJOAR+VpS6G8kO158Kt+Ol3qVyTvuHnSd7qjkoA=",
+  "Hash": "lifVkRGW8X3rackPyQWz5Gjrr4MYHO9MOR28vOf59OY=",
   "Source": "PracticeMvc",
   "BasePath": "_content/PracticeMvc",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\IBS 4\\Desktop\\PractiveMvc\\PracticeMvc\\PracticeMvc\\wwwroot\\images\\nature3.jpg",
+      "SourceId": "PracticeMvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\IBS 4\\Desktop\\PractiveMvc\\PracticeMvc\\PracticeMvc\\wwwroot\\",
+      "BasePath": "_content/PracticeMvc",
+      "RelativePath": "images/nature3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\nature3.jpg"
     },
     {
       "Identity": "C:\\Users\\IBS 4\\Desktop\\PractiveMvc\\PracticeMvc\\PracticeMvc\\wwwroot\\js\\site.js",

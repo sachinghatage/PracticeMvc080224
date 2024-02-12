@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\IBS 4\\Desktop\\PractiveMvc\\PracticeMvc\\PracticeMvc\\wwwroot\\images\\nature3.jpg",
+      "PackagePath": "staticwebassets\\images\\nature3.jpg"
+    },
+    {
       "Id": "C:\\Users\\IBS 4\\Desktop\\PractiveMvc\\PracticeMvc\\PracticeMvc\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

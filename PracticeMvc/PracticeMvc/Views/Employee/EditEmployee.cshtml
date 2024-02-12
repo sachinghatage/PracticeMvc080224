@@ -62,7 +62,33 @@
         </div>
         <div class="col-md-4 mb-3">
             <label asp-for="City">City</label>
-            <input asp-for="City" class="form-control" placeholder="City" required>
+            <select asp-for="City" class="form-select">
+                <option value="">Select City</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Kanpur">Kanpur</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Amritsar">Amritsar</option>
+                <option value="Mysuru">Mysuru</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Allahabad">Allahabad</option>
+                <option value="Kochi">Kochi</option>
+                <option value="Bhopal">Bhopal</option>
+                <option value="Belagavi">Belagavi</option>
+                <option value="Kannur">Kannur</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Ajmer">Ajmer</option>
+                <option value="Gurugram">Gurugram</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Kalaburgi">Kalaburgi</option>
+                <option value="Baroda">Baroda</option>
+                <option value="lucknow">lucknow</option>
+                <option value="Vishakapatnam">Vishakapatnam</option>
+                <option value="Surat">Surat</option>
+            </select>
+            <span asp-validation-for="City" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label>Select Gender:</label><br />
@@ -83,12 +109,4 @@
 </form>
 
 
-<div class="row">
-    <div class="col-sm-3 mb-3">
-        <label asp-for="City" class="form-label">City</label>
-    </div>
-    <div class="col-sm-2 mb-3">
-        <input asp-for="City" class="form-control" placeholder="City" required>
-    </div>
-</div>
 
