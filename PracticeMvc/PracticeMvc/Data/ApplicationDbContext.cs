@@ -11,5 +11,7 @@ namespace PracticeMvc.Data
         }
 
         public DbSet<Employee> Employees { get; set; }
+
+        public DbSet<EmployeeUser> EmployeesUser { get; set; }
     }
 }
