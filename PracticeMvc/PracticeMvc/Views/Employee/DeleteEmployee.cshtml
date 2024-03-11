@@ -2,7 +2,7 @@
 
 
 
-<form method="post">
+<form id="deleteForm" method="post">
     <div class="form-row">
         <div class="col-md-4 mb-3">
             <label asp-for="Name">Name</label>
@@ -19,7 +19,7 @@
 
 
         <div>
-            <button class="btn btn-danger mx-2" type="submit"><i class="bi bi-trash-fill"></i> Delete</button>
+            <button  class="btn btn-danger mx-2" type="submit" onclick="confirmDelete()"><i class="bi bi-trash-fill"></i> Delete</button>
             <a class="btn btn-primary mx-2" asp-controller="Employee" asp-action="Index"><i class="bi bi-arrow-left"></i> Back to list</a>
         </div>
 
@@ -28,3 +28,24 @@
 
 
 </form>
+
+
+<script>
+    function confirmDelete() {
+        if (confirm('Are you sure to delete this item')) {
+            document.getElementById('deleteForm').submit();
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IBS 4\\Desktop\\PractiveMvc\\PracticeMvc\\PracticeMvc\\PracticeMvc.csproj": {}
+    "C:\\Users\\IBS 4\\Desktop\\git\\PracticeMvc080224\\PracticeMvc\\PracticeMvc\\PracticeMvc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IBS 4\\Desktop\\PractiveMvc\\PracticeMvc\\PracticeMvc\\PracticeMvc.csproj": {
+    "C:\\Users\\IBS 4\\Desktop\\git\\PracticeMvc080224\\PracticeMvc\\PracticeMvc\\PracticeMvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IBS 4\\Desktop\\PractiveMvc\\PracticeMvc\\PracticeMvc\\PracticeMvc.csproj",
+        "projectUniqueName": "C:\\Users\\IBS 4\\Desktop\\git\\PracticeMvc080224\\PracticeMvc\\PracticeMvc\\PracticeMvc.csproj",
         "projectName": "PracticeMvc",
-        "projectPath": "C:\\Users\\IBS 4\\Desktop\\PractiveMvc\\PracticeMvc\\PracticeMvc\\PracticeMvc.csproj",
+        "projectPath": "C:\\Users\\IBS 4\\Desktop\\git\\PracticeMvc080224\\PracticeMvc\\PracticeMvc\\PracticeMvc.csproj",
         "packagesPath": "C:\\Users\\IBS 4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IBS 4\\Desktop\\PractiveMvc\\PracticeMvc\\PracticeMvc\\obj\\",
+        "outputPath": "C:\\Users\\IBS 4\\Desktop\\git\\PracticeMvc080224\\PracticeMvc\\PracticeMvc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\IBS 4\\AppData\\Roaming\\NuGet\\NuGet.Config",

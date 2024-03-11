@@ -1,5 +1,8 @@
 ﻿@model Employee
 
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
 
 @* <form method="post">
@@ -27,7 +30,9 @@
 </head>
 
 <form method="post">
-    <div class="form-row">
+
+    <partial name="_PracticeMvcFormFields" model="Model"/>
+    @* <div class="form-row">
         <div class="col-md-4 mb-3">
             <label asp-for="Name">Name</label>
             <input asp-for="Name" class="form-control" placeholder="Name" required>
@@ -122,6 +127,6 @@
     <div class="mt-3">
         <button class="btn btn-primary" type="submit">Submit form</button>
         <a class="btn btn-primary mx-2" asp-controller="Employee" asp-action="Index"><i class="bi bi-arrow-left"></i> Back to list</a>
-    </div>
+    </div> *@
 </form>
 

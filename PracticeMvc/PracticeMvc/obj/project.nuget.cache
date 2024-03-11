@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x5lQ/FiphhbkUwf9LlWfzi36QOlKt2u9xbVo8+sjNvW1k2eoydXeV7mWS6fg6RqZ6SUQfEzkBPCZVB2ghv+LoQ==",
+  "dgSpecHash": "NSHe/TjWgFr2PldI5gKHVICdvHFkCtM437uExDd7MSgetPIm8qaSTf7F1i7JBgYMpcT06/u7w9DVe15DDD/BRg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\IBS 4\\Desktop\\PractiveMvc\\PracticeMvc\\PracticeMvc\\PracticeMvc.csproj",
+  "projectFilePath": "C:\\Users\\IBS 4\\Desktop\\git\\PracticeMvc080224\\PracticeMvc\\PracticeMvc\\PracticeMvc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\IBS 4\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\IBS 4\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

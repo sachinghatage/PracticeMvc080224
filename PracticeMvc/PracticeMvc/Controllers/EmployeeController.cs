@@ -19,33 +19,43 @@ namespace PracticeMvc.Controllers
             return View(sortedEmployees);
         }
 
+
+        private List<Employee> SortEmployees(string sortOrder)
+        {
+            IQueryable<Employee> employeesQuery = dbContext.Employees.AsQueryable();
+
+            switch (sortOrder)
+            {
+                case "id_desc":
+                    employeesQuery = employeesQuery.OrderByDescending(e => e.Id);
+                    break;
+
+                case "name":
+                    employeesQuery = employeesQuery.OrderBy(e => e.Name);
+                    break;
+
+
+                case "name_desc":
+                    employeesQuery = employeesQuery.OrderByDescending(e => e.Name);
+                    break;
+
+
+                default:
+                    employeesQuery = employeesQuery.OrderBy(e => e.Id);
+                    break;
+            }
+
+            return employeesQuery.ToList();
+        }
+
+
+
         [HttpGet]    //to avoid form submission twice better to use get and post for same method
         public IActionResult CreateEmployee()
         {
             return View();
         }
-        /*
-                [HttpPost]
-                public IActionResult CreateEmployee(Employee employee)
-                {
-                    if (ModelState.IsValid)   // by using this we ensure that form is submitted only once on post request,if this condition is not given values in db are saved twice
-                    {
-                        dbContext.Employees.Add(employee);
-                        dbContext.SaveChanges();
-                        return RedirectToAction("Index");
-                    }
-
-                    return View(employee);
-                }*/
-
-        /*[HttpPost]
-        public IActionResult CreateEmployee(Employee employee)
-        {
-                dbContext.Employees.Add(employee);
-                dbContext.SaveChanges();
-                return RedirectToAction("Index");
-  
-        }*/
+       
 
 
         [HttpPost]
@@ -98,33 +108,7 @@ namespace PracticeMvc.Controllers
         }
 
 
-        private List<Employee> SortEmployees(string sortOrder)
-        {
-            IQueryable<Employee> employeesQuery = dbContext.Employees.AsQueryable();
-
-            switch(sortOrder)
-            {
-                case "id_desc":
-                    employeesQuery = employeesQuery.OrderByDescending(e=>e.Id);
-                    break;
-
-                case "name":
-                    employeesQuery = employeesQuery.OrderBy(e=>e.Name);
-                    break;
-
-
-                case "name_desc":
-                    employeesQuery = employeesQuery.OrderByDescending(e=>e.Name);
-                    break;
-
-
-                default:
-                    employeesQuery = employeesQuery.OrderBy(e=>e.Id);
-                    break;
-            }
-
-            return employeesQuery.ToList();
-        }
+       
 
     }
 }
